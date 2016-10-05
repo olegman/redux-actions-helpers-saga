@@ -1,5 +1,10 @@
 import { fork as sagaFork } from 'redux-saga/effects';
 
-export function fork(take, action, watcher) {
-    return sagaFork(take, action.toString(), watcher);
+// helper is Saga Helpers (takeEvery, takeLatest, throttle)
+export function forkActionWatcher(helper, actions, watcher) {
+    if (!Array.isArray(actions)) {
+        actions = [actions]
+    }
+    actions = actions.map(action => action.toString());
+    return sagaFork(helper, actions, watcher);
 }
