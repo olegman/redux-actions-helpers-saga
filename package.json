@@ -1,7 +1,7 @@
 {
   "name": "redux-actions-helpers-saga",
   "description": "Redux actions helpers for saga",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Oleg Martynov",
     "email": "olegman.ru@gmail.com"
